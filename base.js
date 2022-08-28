@@ -137,7 +137,7 @@ const dataObj = {
         <a class="link tomato" href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting">freecodecamp Algorithm Scripting Challenges</a> 
     </li>
     <li class="task__item">
-    Практичне завдання: Впровадити інтерактивне side-menu без перезавантаження сторінки. Ви можете вибрати будь-яку тему: покемони, телефони, сторінки сайту aka about/prices/goal/etc.
+    Практичне завдання: Впровадити інтерактивне side-menu без перезавантаження сторінки. Ви можете вибрати будь-яку тему: покемони, телефони, тощо.
     </li>
  </ol>`,
 
@@ -173,7 +173,7 @@ const dataObj = {
          На цей раз вам не потрібен форк, працюйте з наявним репо. Git зберігає історію для вас.
     </li>
     <li class="task__item">
-    Ці матеріали будуть корисні <a class="link tomato" href="https://github.com/kottans/frontend/blob/2022_UA/tasks/js-oop-frogger.md">link</a> 
+    Ці матеріали будуть корисні - <a class="link tomato" href="https://github.com/kottans/frontend/blob/2022_UA/tasks/js-oop-frogger.md">link</a> 
     </li>
  </ol>`,
 
@@ -197,7 +197,7 @@ const dataObj = {
                 <a class="link tomato" href="https://www.w3schools.com/css/css3_transitions.asp">CSS3 Transitions</a>
             </li>
             <li>
-                a class="link tomato" href="https://davidwalsh.name/css-flip">Flip Animation</a>
+                <a class="link tomato" href="https://davidwalsh.name/css-flip">Flip Animation</a>
             </li>
         </ul>
     </li>

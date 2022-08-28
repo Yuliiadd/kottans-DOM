@@ -82,9 +82,9 @@ ul li{list-style: none;}
 }
 
 .user__area {
-display: grid;
-justify-items: center;
-row-gap: 5px;
+	display: grid;
+	justify-items: center;
+	row-gap: 5px;
 
 }
 
@@ -150,6 +150,11 @@ row-gap: 5px;
 	background-color:tomato;
 }
 
+.selected {
+	background-color:tomato;
+}
+
+
 .nav__item:before {
 	content: '';
 	background-image: url(img/paw-white.png);
@@ -183,6 +188,7 @@ row-gap: 5px;
 }
 
 .description {
+	max-width: 800px;
 	font-size: 25px;
 	line-height: 2.5rem;
 }
@@ -190,6 +196,7 @@ row-gap: 5px;
 .btn {
 	height: 50px;
 	width: 150px;
+	font-size: 14px;
 	background-color: tomato;
 	border-radius: 50px;
 	display: flex;
@@ -251,11 +258,14 @@ input:checked ~ .checkbox {
 	height: 50px;
 }
 
+.buttons {
+	display: none;
+	width: 380px;
+	gap: 10px;
+	justify-content: space-between;
+	align-items:center;
 
-
-
-
-
+}
 
 
 
