@@ -14,6 +14,8 @@ const checkboxes = document.querySelectorAll('.checkbox');
 const progressDig = document.querySelector('.progress__dig');
 const progressLine = document.querySelector('.progress');
 
+const section =  document.querySelector('.section');
+
 
 let currentDesc = description.textContent;
 let currentTitle = title.textContent;
@@ -47,7 +49,6 @@ function getCurrentContent(e) {
 nav_items.forEach(item => {
 item.classList.remove('selected');
 }); 
-console.log(e.target);
 
 if (e.path.length == 10) {
     e.target.parentElement.classList.add('selected');    
@@ -60,10 +61,19 @@ changePage(currentDesc, currentTitle)
 };
 
 function changePage(currentDesc, currentTitle) {
-title.textContent = currentTitle;
-description.innerHTML = currentDesc;
-btn.style.display = "none";
-buttonsDiv.style.display = 'flex';
+// title.textContent = currentTitle;
+// description.innerHTML = currentDesc;
+// btn.style.display = "none";
+// buttonsDiv.style.display = 'flex';
+
+let newTitle = document.createElement("h4");
+newTitle.classList.add('title__chapter');
+newTitle.textContent = currentTitle;
+console.log(newTitle);
+
+title.replaceWith(newTitle);
+console.log(title);
+
 
 };
 
@@ -78,5 +88,6 @@ function calcProgress(event) {
 progressDig.textContent = Math.floor((currentProgress / progressMax * 100)) + "%";
 progressLine.style.width = Math.floor((currentProgress / progressMax * 100)) + "%";
 
-}
+
+};
 

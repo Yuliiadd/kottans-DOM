@@ -175,12 +175,6 @@ ul li{list-style: none;}
 	color: white;
 }
 
-.checkbox:checked ~ .aside > .nav > li {
-	background-color: tomato;
-	color: white;
-}
-
-
 .link {
 	text-decoration: none;
 	color: white;
