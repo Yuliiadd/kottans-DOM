@@ -21,7 +21,7 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: Verdana, sans-serif;
 }
 
 a, a:visited{text-decoration: none;}
@@ -78,7 +78,11 @@ ul li{list-style: none;}
 
 .logo__img * {
 	fill: white;
+	transition: 0.5s;
+}
 
+.logo__img:hover * {
+	fill: tomato;
 }
 
 .user__area {
@@ -90,7 +94,11 @@ ul li{list-style: none;}
 
 .user__img{
 	width: 60px;
-	position: relative;	
+	transition: 0.5s;
+}
+
+.user__img:hover {
+	box-shadow: 0px 0px 5px tomato;
 }
 
 .progress__dig {
@@ -101,7 +109,7 @@ ul li{list-style: none;}
 	position: absolute;
 	width: 490px;
 	border-radius: 10px;
-	right: 380px;
+	right: calc(50% - (510px / 2));
 	top: 101px;
 	border: 1px solid white;
 }
@@ -111,7 +119,7 @@ ul li{list-style: none;}
 	justify-content: center;
 	border-radius: 10px;
 	background-color: tomato;
-	width: 56%;
+	width: 5%;
 
 }
 
@@ -130,11 +138,48 @@ ul li{list-style: none;}
 }
 
 .chapter {
+	display: inline-block;
 	text-transform: uppercase;
 	font-size: 20px;
 	margin: 20px 0;
-
+	font-weight: 700;
+	margin-left: -10px;
+	width: 240px;
 }
+
+	.chapter::after {
+	content: "Done!";
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	line-height: 16px;
+	justify-content: center;
+	font-size: 6px;
+	font-weight: 500;
+	background-color: gray;	
+	color: #485563;
+	width: 40px;
+	height: 16px;
+	border-radius: 50px;
+	margin-left: 12px;
+	margin-top: 2px;
+}
+
+
+.checkbox {
+	opacity:0;
+}
+
+.checkbox:checked + .chapter::after {
+	background-color: tomato;
+	color: white;
+}
+
+.checkbox:checked ~ .aside > .nav > li {
+	background-color: tomato;
+	color: white;
+}
+
 
 .link {
 	text-decoration: none;
@@ -224,42 +269,6 @@ ul li{list-style: none;}
 .task__item {
 	font-size: 18px;
 	line-height: 1.8rem;
-}
-
-label {
-	display: block;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-}
-
-input {
-	position: absolute;
-	transform: scale(0);
-}
-
-input:checked ~ .checkbox {
-	transform: rotate(45deg);
-	width: 20px;
-	margin-left: 16px;
-	border-color: tomato;
-	border-top-color: transparent;
-	border-left-color: transparent;
-	border-radius: 0;
-}
-.checkbox {
-	display:block;
-	width: inherit;
-	height: inherit;
-	border: 3px solid tomato;
-	border-radius: 6px;
-	transition: all 0.375s;
-	margin-bottom: 20px;
-	
-}
-
-.done {
-	height: 50px;
 }
 
 .buttons {
