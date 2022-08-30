@@ -49,6 +49,10 @@ function getCurrrentContent(e) {
         checkboxes.forEach(item => { if (item.checked) { currentProgress++;}});
         progressDig.textContent = Math.floor((currentProgress / progressMax * 100)) + "%";
         progressLine.style.width = Math.floor((currentProgress / progressMax * 100)) + "%";  
+        console.log(currentProgress);
+        if (currentProgress == 3) {
+            alert("Вітаннячка, котан! Го на Стейдж 1)))")
+        }
         
         default:
         return;
