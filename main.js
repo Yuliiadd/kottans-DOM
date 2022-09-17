@@ -3,7 +3,6 @@
 import dataObj from "./base.js";
 
 const title = document.querySelector('.title__chapter');
-const description = document.querySelector('.description');
 const nav_items = document.querySelectorAll('.nav__item');
 const nav = document.querySelector('.nav');
 const btn = document.querySelector('.btn');
@@ -87,13 +86,13 @@ function renderPage(id) {
 
     const task = dataObj.filter(task => task.id == id);
     const taskExesiceList = task[0].taskExesice.map(task => {
-    const { taskText, url, urlText } = task;
-    return`
-            <li class="task__item">
-                ${taskText ? taskText : ""}
-                ${url ? `<a class="link tomato" href="${url}" target="_blank">${urlText}</a>` : ""}
-            </li>
-        `;
+        const { taskText, url, urlText } = task;
+        return`
+                <li class="task__item">
+                    ${taskText ? taskText : ""}
+                    ${url ? `<a class="link tomato" href="${url}" target="_blank">${urlText}</a>` : ""}
+                </li>
+            `;
     }).join('');    
 
     taskList.innerHTML = taskExesiceList;
